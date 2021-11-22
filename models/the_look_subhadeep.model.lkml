@@ -30,15 +30,15 @@ persist_with: the_look_subhadeep_default_datagroup
 explore: imgsrc1onerroralert2 {}
 
 explore: billion_orders {
-  join: orders {
+  join: orders1 {
     type: left_outer
-    sql_on: ${billion_orders.order_id} = ${orders.id} ;;
+    sql_on: ${billion_orders.order_id} = ${orders1.id} ;;
     relationship: many_to_one
   }
 
   join: users {
     type: left_outer
-    sql_on: ${orders.user_id} = ${users.id} ;;
+    sql_on: ${orders1.user_id} = ${users.id} ;;
     relationship: many_to_one
   }
 }
@@ -54,15 +54,15 @@ explore: events {
 }
 
 explore: fakeorders {
-  join: orders {
+  join: orders1 {
     type: left_outer
-    sql_on: ${fakeorders.order_id} = ${orders.id} ;;
+    sql_on: ${fakeorders.order_id} = ${orders1.id} ;;
     relationship: many_to_one
   }
 
   join: users {
     type: left_outer
-    sql_on: ${orders.user_id} = ${users.id} ;;
+    sql_on: ${orders1.user_id} = ${users.id} ;;
     relationship: many_to_one
   }
 }
@@ -72,29 +72,29 @@ explore: fatal_error_user_derived_base {}
 explore: flights {}
 
 explore: hundred_million_orders {
-  join: orders {
+  join: orders1 {
     type: left_outer
-    sql_on: ${hundred_million_orders.order_id} = ${orders.id} ;;
+    sql_on: ${hundred_million_orders.order_id} = ${orders1.id} ;;
     relationship: many_to_one
   }
 
   join: users {
     type: left_outer
-    sql_on: ${orders.user_id} = ${users.id} ;;
+    sql_on: ${orders1.user_id} = ${users.id} ;;
     relationship: many_to_one
   }
 }
 
 explore: hundred_million_orders_wide {
-  join: orders {
+  join: orders1 {
     type: left_outer
-    sql_on: ${hundred_million_orders_wide.order_id} = ${orders.id} ;;
+    sql_on: ${hundred_million_orders_wide.order_id} = ${orders1.id} ;;
     relationship: many_to_one
   }
 
   join: users {
     type: left_outer
-    sql_on: ${orders.user_id} = ${users.id} ;;
+    sql_on: ${orders1.user_id} = ${users.id} ;;
     relationship: many_to_one
   }
 }
@@ -111,18 +111,18 @@ explore: inventory_items {
   }
 }
 
-explore: orders {
+explore: orders1 {
   join: users {
     type: left_outer
-    sql_on: ${orders.user_id} = ${users.id} ;;
+    sql_on: ${orders1.user_id} = ${users.id} ;;
     relationship: many_to_one
   }
 }
 
 explore: order_items {
-  join: orders {
+  join: orders1 {
     type: left_outer
-    sql_on: ${order_items.order_id} = ${orders.id} ;;
+    sql_on: ${order_items.order_id} = ${orders1.id} ;;
     relationship: many_to_one
   }
 
@@ -134,7 +134,7 @@ explore: order_items {
 
   join: users {
     type: left_outer
-    sql_on: ${orders.user_id} = ${users.id} ;;
+    sql_on: ${orders1.user_id} = ${users.id} ;;
     relationship: many_to_one
   }
 
@@ -168,15 +168,15 @@ explore: sindhu {
 }
 
 explore: ten_million_orders {
-  join: orders {
+  join: orders1{
     type: left_outer
-    sql_on: ${ten_million_orders.order_id} = ${orders.id} ;;
+    sql_on: ${ten_million_orders.order_id} = ${orders1.id} ;;
     relationship: many_to_one
   }
 
   join: users {
     type: left_outer
-    sql_on: ${orders.user_id} = ${users.id} ;;
+    sql_on: ${orders1.user_id} = ${users.id} ;;
     relationship: many_to_one
   }
 }
